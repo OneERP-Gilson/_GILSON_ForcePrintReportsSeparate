@@ -9,7 +9,7 @@ namespace _GIL_SeperateDocuments
 {
     public static class Functions
     {
-        public static InvokeRequestData CreateInvokeRequestSetVar(string task, params string[] args)
+        public static InvokeRequestData CreateInvokeRequestSetVar(string task, bool addSpace, params string[] args)
         {
             StringBuilder TaskParms = new StringBuilder();
             InvokeRequestData invokeRequest = new InvokeRequestData();
@@ -24,16 +24,35 @@ namespace _GIL_SeperateDocuments
                 {
                     TaskParms.Append("~LIT~(");
                     TaskParms.Append(args[i]);
-                    TaskParms.Append("=");
+                    if (addSpace)
+                    {
+                        TaskParms.Append(" = ");
+                    }
+                    else
+                    {
+                        TaskParms.Append("=");
+                    }
                 }
                 else
                 {
                     TaskParms.Append(args[i]);
                     TaskParms.Append("),");
+                    
+                    if (addSpace)
+                    {
+                        TaskParms.Append(" ");
+                    }
                 }
             }
-            
-            TaskParms.Remove(TaskParms.Length - 1, 1);
+
+            if (addSpace)
+            {
+                TaskParms.Remove(TaskParms.Length - 2, 2);
+            }
+            else
+            {
+                TaskParms.Remove(TaskParms.Length - 1, 1);
+            }
             TaskParms.Append(")");
 
             invokeRequest.IDOName = "BGTaskDefinitions";

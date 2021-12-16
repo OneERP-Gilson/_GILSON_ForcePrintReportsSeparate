@@ -18,3 +18,20 @@ C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\TestApp\obj\Debug\Te
 C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.csproj.CopyComplete
 C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.exe
 C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.pdb
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\TestApp.exe.config
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\TestApp.exe
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\TestApp.pdb
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\_GIL_SeperateDocuments.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\MGShared.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\WSFormServerProtocol.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\WSEnums.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\_GIL_SeperateDocuments.pdb
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\bin\Debug\IDOProtocol.XmlSerializers.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.csprojAssemblyReference.cache
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.Form1.resources
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.Properties.Resources.resources
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.csproj.GenerateResource.cache
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.csproj.CopyComplete
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.exe
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\TestApp\obj\Debug\TestApp.pdb

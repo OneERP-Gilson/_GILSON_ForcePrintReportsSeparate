@@ -66,7 +66,7 @@ namespace _GIL_SeperateDocuments
             string DisplayHeader, string ConfigDetails, string BG_TASKID, string PrintDrawingNumber, string PrintTax,
             string PrintDeliveryIncoTerms, string PrintEUCode, string PrintCommodityCode, string PrintOriginCode,
             string PrintCurrencyCode, string PrintHeaderOnAllPages, string PrintEndUserItem, string pSite, string PrintPreview,
-            string UseProfile, ref string Infobar)
+            string UseProfile, ref string Infobar, string TaskName)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace _GIL_SeperateDocuments
                  OrderReleaseEnding, PrintInternalNotes, PrintExternalNotes, PrintItemOverivew,
                  DisplayHeader, ConfigDetails, BG_TASKID, PrintDrawingNumber, PrintTax,
                  PrintDeliveryIncoTerms, PrintEUCode, PrintCommodityCode, PrintOriginCode,
-                 PrintCurrencyCode, PrintHeaderOnAllPages, PrintEndUserItem, pSite, PrintPreview, UseProfile, ref Infobar);
+                 PrintCurrencyCode, PrintHeaderOnAllPages, PrintEndUserItem, pSite, PrintPreview, UseProfile, ref Infobar, TaskName);
             }
             catch(Exception ex)
             {
@@ -94,9 +94,9 @@ namespace _GIL_SeperateDocuments
         public short _GIL_Seperate_SROInvoices(string ProcessReprint, string StartSRONum, string EndSRONum, string StartSROLine, string EndSROLine, string StartSROOper,
             string EndSROOper, string StartBillMgr, string EndBillMgr, string StartCustNum, string EndCustNum, string StartRegion, string EndRegion, string StartTransDate,
             string EndTransDate, string StartCloseDate, string EndCloseDate, string InclCalculated, string InclProject, string InvCred, string InvDate, string TransToDomCurr,
-            string SoryBy, int SubStartInvNum, int SubEndInvNum, string StartReprintInvDate, string EndReprintInvDate, string PrintCustomerNotes, string PrintSRONotes,
+            string SoryBy, string SubStartInvNum, string SubEndInvNum, string StartReprintInvDate, string EndReprintInvDate, string PrintCustomerNotes, string PrintSRONotes,
             string PrintSROLineNotes, string PrintSROOperNotes, string PrintTransNotes, string PrintInternalNotes, string PrintExternalNotes, string PrintSerials,
-            string PrintMatl, string PrintLabor, string PrintMisc, string SummarizeTrans, string ShipToAddress, string PrintEuroTotal, string OrderBy, ref string Infobar)
+            string PrintMatl, string PrintLabor, string PrintMisc, string SummarizeTrans, string ShipToAddress, string PrintEuroTotal, string OrderBy, ref string Infobar, string UseProfile)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace _GIL_SeperateDocuments
                     InvDate, TransToDomCurr, SoryBy, SubStartInvNum, SubEndInvNum, StartReprintInvDate,
                     EndReprintInvDate, PrintCustomerNotes, PrintSRONotes, PrintSROLineNotes, PrintSROOperNotes,
                     PrintTransNotes, PrintInternalNotes, PrintExternalNotes, PrintSerials, PrintMatl, PrintLabor,
-                    PrintMisc, SummarizeTrans, ShipToAddress, PrintEuroTotal, OrderBy);
+                    PrintMisc, SummarizeTrans, ShipToAddress, PrintEuroTotal, OrderBy, UseProfile);
             }
             catch (Exception ex)
             {

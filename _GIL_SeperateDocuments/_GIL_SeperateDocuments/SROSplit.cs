@@ -12,13 +12,43 @@ namespace _GIL_SeperateDocuments
         public static short SROInvoiceSubmitLoop(IIDOCommands context, string ProcessReprint, string StartSRONum, string EndSRONum, string StartSROLine, string EndSROLine, string StartSROOper,
             string EndSROOper, string StartBillMgr, string EndBillMgr, string StartCustNum, string EndCustNum, string StartRegion, string EndRegion, string StartTransDate,
             string EndTransDate, string StartCloseDate, string EndCloseDate, string InclCalculated, string InclProject, string InvCred, string InvDate, string TransToDomCurr,
-            string SortBy, int SubStartInvNum, int SubEndInvNum, string StartReprintInvDate, string EndReprintInvDate, string PrintCustomerNotes, string PrintSRONotes,
+            string SortBy, string SubStartInvNum, string SubEndInvNum, string StartReprintInvDate, string EndReprintInvDate, string PrintCustomerNotes, string PrintSRONotes,
             string PrintSROLineNotes, string PrintSROOperNotes, string PrintTransNotes, string PrintInternalNotes, string PrintExternalNotes, string PrintSerials,
-            string PrintMatl, string PrintLabor, string PrintMisc, string SummarizeTrans, string ShipToAddress, string PrintEuroTotal, string OrderBy)
+            string PrintMatl, string PrintLabor, string PrintMisc, string SummarizeTrans, string ShipToAddress, string PrintEuroTotal, string OrderBy, string UseProfile)
         {
-            for (int i = SubStartInvNum; i < SubEndInvNum + 1; i++)
+            string prefix = "";
+            char[] charArray = SubStartInvNum.ToCharArray();
+            for (int i = 0; i < charArray.Length; i++)
             {
-                InvokeRequestData invokeRequest = Functions.CreateInvokeRequestSetVar("ServiceOrderInvoicing",
+                if (!char.IsDigit(charArray[i]))
+                {
+                    prefix += charArray[i];
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            SubStartInvNum = SubStartInvNum.Remove(0, prefix.Length);
+            SubEndInvNum = SubEndInvNum.Remove(0, prefix.Length);
+
+            int startNum = int.Parse(SubStartInvNum);
+            int endNum = int.Parse(SubEndInvNum);
+            int padLength = SubStartInvNum.Length;
+
+            for (int i = startNum; i < endNum + 1; i++)
+            {
+                string invNum = "";
+                if (!string.IsNullOrEmpty(prefix))
+                {
+                    invNum = prefix + i.ToString().PadLeft(padLength, '0');
+                }
+                else
+                {
+                    invNum = i.ToString();
+                }
+                InvokeRequestData invokeRequest = Functions.CreateInvokeRequestSetVar("ServiceOrderInvoicing", true,
                     nameof(ProcessReprint), ProcessReprint,
                     nameof(StartSRONum), StartSRONum,
                     nameof(EndSRONum), EndSRONum,
@@ -42,8 +72,8 @@ namespace _GIL_SeperateDocuments
                     nameof(InvDate), InvDate,
                     nameof(TransToDomCurr), TransToDomCurr,
                     nameof(SortBy), SortBy,
-                    nameof(SubStartInvNum), i.ToString(),
-                    nameof(SubEndInvNum), i.ToString(),
+                    nameof(SubStartInvNum), invNum.ToString(),
+                    nameof(SubEndInvNum), invNum.ToString(),
                     nameof(StartReprintInvDate), StartReprintInvDate,
                     nameof(EndReprintInvDate), EndReprintInvDate,
                     nameof(PrintCustomerNotes), PrintCustomerNotes,
@@ -60,7 +90,8 @@ namespace _GIL_SeperateDocuments
                     nameof(SummarizeTrans), SummarizeTrans,
                     nameof(ShipToAddress), ShipToAddress,
                     nameof(PrintEuroTotal), PrintEuroTotal,
-                    nameof(OrderBy), OrderBy);
+                    nameof(OrderBy), OrderBy,
+                    nameof(UseProfile), UseProfile);
 
                 context.Invoke(invokeRequest);
             }

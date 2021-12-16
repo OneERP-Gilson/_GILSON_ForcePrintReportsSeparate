@@ -15,3 +15,10 @@ C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\_GIL_SeperateDocumen
 C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.dll
 C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.pdb
 C:\Users\JustinBrickler\source\repos\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.csprojAssemblyReference.cache
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.csprojAssemblyReference.cache
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.csproj.CoreCompileInputs.cache
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.pdb
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\bin\Debug\_GIL_SeperateDocuments.dll
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\bin\Debug\_GIL_SeperateDocuments.pdb
+C:\Clients\Gilson\Gilson Development\CSI\VisualStudioProjects\_GIL_SeperateDocuments\_GIL_SeperateDocuments\obj\Debug\_GIL_SeperateDocuments.csproj.CopyComplete

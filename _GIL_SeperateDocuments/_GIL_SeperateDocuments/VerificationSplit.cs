@@ -65,25 +65,27 @@ namespace _GIL_SeperateDocuments
             return coItemsResponse;
         }
 
-        public static short VerificationSubmitLoop(IIDOCommands context, 
-            string CoTypeRegular, string CoTypeBlanket, string CoStatus, string CoLineReleaseStat,
+        public static short VerificationSubmitLoop(
+            IIDOCommands context, string CoTypeRegular, string CoTypeBlanket, string CoStatus, string CoLineReleaseStat,
             string PrintItemCustItem, string PrintOrderText, string PrintStandardOrderText, string PrintCompanyName,
             string DisplayDate, string DateToAppear, string DateToAppearOffset, string PrintBlanketLineText,
-            string PrintBlanketLineDes, string PrintLineReleaseNotes, string PrintLineReleaseDes, string PrintShipToNotes, string printBillToNotes,
-            string PrintPlanningItemMaterials, string IncludeSerialNumbers, string PrintEuroValue, string PrintPrice,
-            string SoryBy, string OrderStarting, string OrderEnding, string SalespersonStarting,
-            string SalespersonEnding, string OrderLineStarting, string OrderReleaseStarting, string OrderLineEnding,
-            string OrderReleaseEnding, string PrintInternalNotes, string PrintExternalNotes, string PrintItemOverivew,
-            string DisplayHeader, string ConfigDetails, string BG_TASKID, string PrintDrawingNumber, string PrintTax,
-            string PrintDeliveryIncoTerms, string PrintEUCode, string PrintCommodityCode, string PrintOriginCode,
-            string PrintCurrencyCode, string PrintHeaderOnAllPages, string PrintEndUserItem, string pSite, string PrintPreview, string UseProfile, ref string Infobar)
+            string PrintBlanketLineDes, string PrintLineReleaseNotes, string PrintLineReleaseDes,
+            string PrintShipToNotes, string printBillToNotes, string PrintPlanningItemMaterials,
+            string IncludeSerialNumbers, string PrintEuroValue, string PrintPrice, string SoryBy, string OrderStarting,
+            string OrderEnding, string SalespersonStarting, string SalespersonEnding, string OrderLineStarting,
+            string OrderReleaseStarting, string OrderLineEnding, string OrderReleaseEnding, string PrintInternalNotes,
+            string PrintExternalNotes, string PrintItemOverivew, string DisplayHeader, string ConfigDetails,
+            string BG_TASKID, string PrintDrawingNumber, string PrintTax, string PrintDeliveryIncoTerms,
+            string PrintEUCode, string PrintCommodityCode, string PrintOriginCode, string PrintCurrencyCode,
+            string PrintHeaderOnAllPages, string PrintEndUserItem, string pSite, string PrintPreview, string UseProfile,
+            ref string Infobar, string TaskName)
         {
             LoadCollectionResponseData coItems = GetListCustomerOrders_Verification(context, OrderStarting, OrderEnding, SalespersonStarting, SalespersonStarting);
 
             for (int i = 0; i < coItems.Items.Count; i++)
             {
                 InvokeRequestData invokeRequest = Functions.CreateInvokeRequestSetVar(
-                    "OrderVerificationReport", nameof(CoTypeRegular), CoTypeRegular, nameof(CoTypeBlanket), CoTypeBlanket, nameof(CoStatus),
+                    TaskName, false, nameof(CoTypeRegular), CoTypeRegular, nameof(CoTypeBlanket), CoTypeBlanket, nameof(CoStatus),
                     CoStatus, nameof(CoLineReleaseStat), CoLineReleaseStat,
                     nameof(PrintItemCustItem), PrintItemCustItem, nameof(PrintOrderText), PrintOrderText, nameof(PrintStandardOrderText),
                     PrintStandardOrderText, nameof(PrintCompanyName), PrintCompanyName, nameof(DisplayDate), DisplayDate,
