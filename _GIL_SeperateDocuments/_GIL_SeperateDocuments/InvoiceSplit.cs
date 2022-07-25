@@ -9,7 +9,6 @@ namespace _GIL_SeperateDocuments
 {
     public static class InvoiceSplit
     {
-
         public static LoadCollectionResponseData GetListCustomerOrders(IIDOCommands context,
                                                   string invCred,
                                                   string startCustomer,
@@ -29,10 +28,10 @@ namespace _GIL_SeperateDocuments
             }
 
             if (!string.IsNullOrEmpty(startCustomer))
-                filter += " AND DerCustNum >= '" + startCustomer + "'";
-            
+                filter += " AND CoCustNum >= '" + startCustomer + "'";
+
             if (!string.IsNullOrEmpty(endCustomer))
-                filter += " AND DerCustNum <= '" + endCustomer + "'";
+                filter += " AND CoCustNum <= '" + endCustomer + "'";
 
             if (!string.IsNullOrEmpty(startOrderNum))
                 filter += " AND CoNum >= '" + startOrderNum + "'";
@@ -42,11 +41,11 @@ namespace _GIL_SeperateDocuments
 
             LoadCollectionResponseData coItemsResponse = new LoadCollectionResponseData();
             LoadCollectionRequestData requestData = new LoadCollectionRequestData();
-            
+
             requestData.Distinct = true;
             requestData.Filter = filter;
             requestData.IDOName = "SLCoitems";
-            requestData.PropertyList = new PropertyList("DerCustNum,CoNum");
+            requestData.PropertyList = new PropertyList("CoCustNum,CoNum");
             requestData.OrderBy = "";
             requestData.RecordCap = 0;
 
@@ -103,7 +102,7 @@ namespace _GIL_SeperateDocuments
                     PrintDrawingNumber.ToString(), PrintTax.ToString(), PrintCurrencyCode.ToString(),
                     PrintDeliverIncoTerms.ToString(), PrintEUDetails.ToString(), PrintHeaderOnAllPages.ToString(),
                     CreateFromShipment.ToString(), PrintTaxID.ToString());
-                
+
                 InvokeResponseData invokeResponse = context.Invoke(invokeRequest);
             }
 
